@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-content ng-controller="searchModalCtrl">
+        <div class="row">
+        <input type="search" class="sf-search-bar" ng-model="searchQuery" ng-change="searchPeople()" placeholder="Search for your friends."/>
+        </div>
+        <div class="row padding">
+            <h4 class="pink">Most followed users</h4>
+        </div>
+        <div class="row" ng-hide="searchLoadingHide" style="margin-top:20px;">
+        <ion-spinner class="sf-loading" icon="lines"></ion-spinner>
+        </div>
+        <hscroller>
+            <hcard ng-repeat="item in recommendationsArr" ui-sref="tab.search.profile({uid:item.uid})" index="{{$index}}" desc="{{item.name}}<br> Followers:{{item.followers}}" image="{{item.photo}}"></hcard>
+        </hscroller>
+        <ion-list>
+            <ion-item class="item item-avatar" ui-sref="tab.search.profile({uid:item.uid})" ng-repeat="item in resultsPeopleArr">
+            <img ng-src="{{item.photo}}">
+            <h2 class="light-blue">{{item.name}}</h2>
+            <p>{{item.branch}}</p>    
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

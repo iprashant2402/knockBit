@@ -1,0 +1,365 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$font-family-base:"Segoe UI" !important;
+$positive:#430f58;// #0093d0 !default;
+$balanced:#009378;
+$royal:#fff;
+$calm:rgb(0,122,255);// #007bb5 !default;
+//$item-divider-bg:#db3236;
+//$item-divider-color:#ffffff !default;
+// Include all of Ionic
+$base-background-color:#f8f8f8;
+@import "www/lib/ionic/scss/ionic";
+
+.red{
+    color: #d72323;
+    font-size:16pt;
+}
+
+.primary-text{color:#3c3b5c;}
+
+.blue{
+    color:#3c3b5c;
+}
+
+.pink{
+    color:#3c3b5c !important;
+    font-weight:600;
+}
+
+.logo{
+    font-size:22pt;
+}
+
+.light-blue{
+color:#1565c0;    
+}
+
+.white{
+    color:#fff;
+}
+
+.grad{
+    background:#f8f8f8;
+}
+.img-circle{
+    border-radius: 50%;
+    display:block;
+    margin:auto;
+}
+
+.sf-loading{
+    display:block;
+    margin:auto;
+}
+.sf-search-bar{
+    border:1px solid #f1f1f1 !important;
+    width:100% !important;
+    height:30px !important;
+    padding:5px !important;
+    //background:transparent !important;
+}
+
+.name{
+    font-weight:600 !important;
+    font-size:14pt;
+    display:block;
+    margin-top:2px;
+}
+.sf-title{
+    color:#fff !important;
+    font-size:16pt;
+    align:left !important;
+    
+}
+.center-text{
+    width:100%;
+    text-align: center;
+}
+.sf-normal-text{
+    font-weight:300;
+    font-size:12pt;
+}
+.sf-light-text{
+    color:#bdbdbd;
+    font-size:10pt;
+}
+.sf-strong-text{
+    color:black;
+    font-size:12pt !important;
+}
+.sf-add-topic{
+    width:100%;
+}
+
+.sf-message{
+    display : block !important;
+    padding :10px !important;
+    border-radius: 5px !important;
+    //background:#f6f6f6 !important;
+}
+.sf-message-meta img{
+    float:left;
+}
+.sf-right{
+    float:right !important;
+    clear : both !important;
+    margin-top : 5px;
+}
+.sf-left{
+    float:left !important;
+    clear : both !important;
+    margin-top : 10px;
+}
+.sf-right-color{
+    background:#f6f6f6 !important;
+    color:black !important;
+}
+.sf-left-color{
+    background:#fff !important;
+    color:black !important;
+    border : 1px solid #e2e2e2;
+}
+.profile-photo{
+    //background:rgb(0,122,255);
+    color:#393e46;
+    text-align: center !important;
+}
+.photo-container img{
+    width:150px;
+    height:150px;
+}
+
+.account-detail-container{
+    text-align: center !important;
+}
+.sf-box{
+    border-top:1px solid #bfbfbf;
+    border-bottom:1px solid #bfbfbf;
+    text-align: center;
+}
+.sf-lt-box{
+    border-right:1px solid #bfbfbf;
+}
+.sf-big-text{
+    font-size:18pt;
+    text-decoration: none;
+    color:black;
+}
+.sf-med-text{
+    font-size:14pt;
+    text-decoration: none;
+    color:#444;
+}
+.alert-box{
+    color: #fff !important;
+    border:1px solid #fff !important;
+}
+.feed-card-divider{
+    text-align: center !important;
+    color: rgb(0,122,255);
+}
+@font-face {
+font-family: AppFont;
+src: url("../fonts/OpenSans-CondLight.ttf");
+}
+
+@font-face {
+font-family: AppFontBold;
+src: url("../fonts/OpenSans-CondBold.ttf");
+}
+
+@font-face {
+font-family: AppFontItalic;
+src: url("../fonts/OpenSans-CondLightItalic.ttf");
+}
+
+@font-face {
+font-family: AppFontRoboto;
+src: url("../fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+font-family: PhilosopherBold;
+src: url("../fonts/Philosopher-Bold.ttf");
+}
+
+@font-face {
+font-family: PhilosopherItalic;
+src: url("../fonts/Philosopher-Italic.ttf");
+}
+
+@font-face {
+font-family: russoOneRegular;
+src: url("../fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+font-family: lobsterTwoRegular;
+src: url("../fonts/LobsterTwo-Regular.ttf");
+}
+
+@font-face {
+font-family: lobsterTwoBold;
+src: url("../fonts/LobsterTwo-Regular.ttf");
+}
+
+@font-face {
+font-family: MuliRegular;
+src: url("../fonts/Muli-Regular.ttf");
+}
+
+@font-face {
+font-family: MuliBold;
+src: url("../fonts/Muli-Bold.ttf");
+}
+//body, span, button, h1, h2, h3, h4, h5, h6, p, ion-item, ion-title {
+//font-family: 'AppFont' !important;
+//}
+
+$calm : #2980b9;
+
+.purple{
+    color:#430f58;
+    font-weight:600;
+}
+
+.login_background{
+  background: #2980b9;
+}
+.sans-light{
+    font-family:'AppFont' !important;
+}
+
+.sans-bold{
+    font-family:'AppFontBold' !important;
+}
+
+.sans-italic{
+    font-family:'AppFontItalic' !important;
+}
+
+.roboto{
+    font-family:'AppFontRoboto' !important;
+}
+
+.russo-one{
+    font-family:'russoOneRegular' !important;
+}
+
+.lobsterTwo-Regular{
+    font-family:'lobsterTwoRegular' !important;
+}
+
+.muli-Regular{
+    font-family:'MuliRegular' !important;
+}
+
+.muli-Bold{
+    font-family:'MuliBold' !important;
+}
+
+.lobsterTwo-Bold{
+    font-family:'Segoe UI' !important;
+}
+
+/* Palette generated by Material Palette - materialpalette.com/red/deep-orange */
+.dark-primary-color    { background: #430f58 !important;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #430f58, #430f58) !important;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #430f58, #430f58) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+.header-background   { background: #d53939 !important;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d53939, #d53939) !important;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d53939, #d53939) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+ }
+.default-primary-color { background: #2c3e50;}//#3498db; }
+.light-primary-color   { background: #ecf0f1; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #f8f8f8 !important; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+.logo-back{
+    height:25%;
+}
+.center{
+    margin:auto !important;
+}
+.center-text{
+    text-align: center !important;
+}
+.sf-input{
+    width:100%;
+    height:40px !important;
+    //border-radius: 20px;
+    margin-top:10px;
+    background: inherit !important;
+    color:white !important;
+    border:0px 0px 0px 0px;
+    border-bottom:1px solid #fff !important;
+}
+
+.sf-radio{
+    width:100%;
+    height:40px !important;
+    border-radius: 20px;
+    margin-top:10px;
+    background: inherit !important;
+    color:black !important;
+    border:1px solid #fff !important;
+}
+.sf-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+    text-align: center;
+}
+.sf-btn{
+    border-radius: 20px;
+}
+.sf-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+    text-align: center;
+}
+.sf-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+    text-align: center;
+}
+.sf-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+    text-align: center;
+}
+.sf-input::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff;
+    text-align: center;
+}
+
+.profile-pic{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin:auto;
+}
+.profilepic-container{
+    margin:auto !important;
+    text-align: center !important;
+}

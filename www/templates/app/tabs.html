@@ -1,0 +1,21 @@
+<ion-tabs class="tabs-color-positive tabs-icon-top">
+    <ion-tab icon-on="ion-android-list" title="Feed" icon-off="ion-android-list" href="#/tab/feed">
+        <ion-nav-view name="feedView"></ion-nav-view>
+    </ion-tab>
+    
+    <ion-tab icon-on="ion-android-search" title="Search" icon-off="ion-android-search" href="#/tab/search">
+        <ion-nav-view name="searchView"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab icon-on="ion-android-chat" title="History" icon-off="ion-android-chat" href="#/tab/history" ng-controller="historyCtrl" on-select="refreshHistory()">
+        <ion-nav-view name="historyView"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab icon-on="ion-android-person" title="My Account" ng-controller="accountCtrl" icon-off="ion-android-person" href="#/tab/account">
+        <ion-nav-view name="AccountView"></ion-nav-view>
+    </ion-tab>
+    
+    <ion-tab icon-on="ion-android-notifications" title="Notifications" ng-controller="notificationCtrl" badge="unreadBadge" badge-style="badge-assertive" icon-off="ion-android-notifications" href="#/tab/notification">
+        <ion-nav-view name="notificationView"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

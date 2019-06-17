@@ -1,0 +1,38 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <div class="buttons">
+        <button class="button button-royal icon ion-compose button-clear" ng-click="modal.show()"></button>
+        </div>
+    </ion-nav-buttons>
+    <ion-content on-drag-right="onDragRight()">
+        <div class="profile-photo">
+        <div class="photo-container row">
+        <img ng-src="{{photo}}" ng-click="updateProfilePic()" class="img-circle"/>    
+        </div>
+        <ion-spinner class="spinner-calm" icon="spiral" ng-show="photoSpinner"></ion-spinner>
+            <span class="name">{{name}},{{age}}</span>
+            <span class="name">{{gender}}</span>    
+        </div><br>
+        <div class="row sf-box">
+            <div class="col col-50 sf-lt-box" ui-sref="tab.account.followersList()"><span class="sf-big-text primary-text"><b>{{numFollowers}}</b></span><br><span>Followers</span></div>
+            <div class="col col-50" ui-sref="tab.account.followingList()"><span class="sf-big-text primary-text"><b>{{numFollowing}}</b></span><br><span>Following</span></div>
+        </div>
+        <div class="list">
+            <div class="item item-divider"><span class="blue">Basic Info</span></div>
+            <div class="item item-icon-left">
+                <i class="icon ion-university primary-text"></i>
+                <span class="sf-light-text">Education :</span> {{branch}}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-briefcase primary-text"></i>
+                <span class="sf-light-text">Work :</span> {{batch}}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-email primary-text"></i>
+                <span class="sf-light-text">E-mail :</span> {{email}}
+            </div>
+        </div>
+        <button class="button button-balanced button-block" ng-click="shareApp('Hey! Download knockBit and follow me to join in the discussions.','Download knockBit',null,'https://play.google.com/store/apps/details?id=com.knockBit.app')">Invite Friends</button>
+        <button ng-click="signout()" class="button button-full button-assertive button-clear">Sign Out</button>
+    </ion-content>
+</ion-view>

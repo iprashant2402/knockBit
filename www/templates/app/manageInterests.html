@@ -1,0 +1,12 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-stable" align-title="center">
+        <button class="button button-clear button-positive" ng-click="modal.hide()">Cancel</button>
+        <h1 class="title">Add your interests</h1>
+        <button class="button button-clear button-balanced" ng-click="submitInterest(interests,uid)">Submit</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <ion-checkbox ng-repeat="item in interests" ng-model="item.checked" ng-checked="item.checked">{{item.text}}</ion-checkbox>
+        </div>
+    </ion-content>
+</ion-modal-view>

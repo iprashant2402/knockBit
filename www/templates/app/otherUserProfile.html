@@ -1,0 +1,33 @@
+<ion-view>
+<ion-content class="padding">
+    <div class="row padding" align="center">
+        <img ng-src="{{userProfile.photo}}" class="img-circle" width="150px" height="150px"/>
+    </div>
+    <div class="row padding">
+        <div class="center-text padding">
+        <p class="name">{{userProfile.name}}</p>
+            <p class="sf-normal-text">{{userProfile.gender}}</p>
+            <p class="sf-normal-text">{{userProfile.age}}</p>
+            <button class="button button-positive button-clear icon ion-more" ng-click="hideSheet()"></button>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col col-md-6">
+        <div class="center-text">
+        <p class="sf-normal-text">Followers : {{userProfile.followers}} </p>
+        </div>
+    </div>
+    <div class="col col-md-6">
+        <div class="center-text">
+        <p class="sf-normal-text">Following : {{userProfile.following}} </p>
+        </div>
+    </div>
+    </div>
+    <div class="list">
+        <div class="item item-divider"><span class="blue sf-normal-text">Basic Info</span></div>
+        <div class="item item-icon-left"><p class="sf-normal-text"><i class="icon ion-university primary-text"></i><span class="sf-light-text">Education</span> {{userProfile.branch}}</p></div>
+        <div class="item item-icon-left"><p class="sf-normal-text"><i class="icon ion-briefcase primary-text"></i><span class="sf-light-text">Work</span> {{userProfile.batch}}</p></div>
+        <div class="item item-icon-left"><p class="sf-normal-text"><i class="icon ion-email primary-text"></i><span class="sf-light-text">Can be contacted at</span> {{userProfile.email}}</p></div>
+    </div>
+</ion-content>
+</ion-view>

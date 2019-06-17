@@ -1,0 +1,16 @@
+<ion-view>
+    <div class="bar bar-subheader bar-stable"><h1 class="title">Following</h1></div>
+    <ion-content class="has-subheader has-header">
+    <div class="row"><p class="sf-light-text">To unfollow someone swipe left.</p></div>
+    <ion-list ng-controller="followingListCtrl" can-swipe="true">
+        <ion-item class="item item-avatar" ng-repeat="item in uidArr | orderBy:'name'">
+            <img ng-src="{{item.photo}}"/>
+            <h2>{{item.name}}</h2>
+            <p>{{item.email}}</p>
+            <ion-option-button class="button button-assertive" ng-click="unfollow(uid,item.uid)">
+            Unfollow
+            </ion-option-button>
+        </ion-item>    
+    </ion-list>
+    </ion-content>
+</ion-view>

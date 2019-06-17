@@ -1,0 +1,62 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="dark-primary-color">
+        <div class="row divider-color logo-back">
+            <div class="col col-center col-100" align="center">
+                <h1 class="text-primary-color lobsterTwo-Regular">knockBit</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-100" align="center">
+            <h4 class="text-primary-color sans-bold">Create an account</h4>
+            </div>
+        </div>
+        <div class="row">
+        <ion-spinner class="spinner-royal sf-loading" icon="spiral" ng-show="signupSpinner"></ion-spinner>
+         </div>   <!--div class="row profilepic-container">
+            <img ng-src="data:image/jpeg;base64,{{pic}}" class="profile-pic"/>
+            </div>
+            <div class="row">
+            <button class="button button-full button-clear button-royal" ng-click="upload()"><i class="icon ion-camera"></i>&nbsp;Upload profile photo</button>
+            </div-->
+            <div class="row padding" ng-show="showalertbox">
+                <div class="col col-100 alert-box"><i class="icon ion-android-alert"></i>&nbsp;{{error}}</div>
+            </div>
+            <div class="row padding">
+            <input type="text" placeholder="Full Name" class="sf-input" ng-model="name"  ng-required/>
+            </div>
+            <div class="row padding">
+            <input type="email" placeholder="Email" class="sf-input" ng-model="email" ng-required/>
+            </div>
+            <div class="row padding">
+            <input type="password" placeholder="Choose a password" class="sf-input" ng-model="pass"  ng-required/>
+            </div>
+            <!--div class="row padding">
+            <input type="text" class="sf-input" placeholder="Education e.g. MS(IT)@XYZ" ng-model="branch"  ng-required/>
+            </div>
+            <div class="row padding">
+            <input type="text" class="sf-input" placeholder="Work e.g. CEO@XYZ" ng-model="batch"  ng-required/>
+            </div>-->
+            <div class="row padding">
+            <input type="number" class="sf-input" placeholder="Age" ng-model="age"  ng-required/>
+            </div><br>
+            <div class="row padding">
+                <div class="col col-100" style="text-align: center;"><span class="sans-bold sf-normal-text text-primary-color">Choose your gender</span></div>
+            </div>
+            <div class="row">
+                <select ng-model="gender" class="sf-radio">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div
+        <div class="row">
+            <div class="col col-12">
+            <button class="button button-balanced button-block" ng-click="signup(email,pass,name,pic,branch,batch,age,gender)">
+            Sign Up
+            </button>
+            </div>
+        </div>
+        <div class="row center-text">
+            <a href="#/login" class="center"><span class="roboto text-primary-color">Already have an account? Sign in</span></a>
+        </div>
+    </ion-content>
+</ion-view>

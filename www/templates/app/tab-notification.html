@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-content on-drag-right="onDragRight()" on-drag-left="onDragLeft()">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshNotifs()">
+        </ion-refresher>
+        <div class="row padding" ng-hide="showLoading">
+        <ion-spinner class="sf-loading spinner-positive" icon="ripple"></ion-spinner>
+        </div>
+        <div class="row zeroDiv card" ng-show="zeroDiv">
+        <div class=" item item-text-wrapper">
+            No new notificatios !    
+        </div>
+        </div>
+        <ion-list>
+            <ion-item class="item-avatar item-text-wrap item-button-right" ng-repeat="item in notifications | orderBy : '-time'">
+                <img ng-src="{{item.photo}}"/>
+                <h2>{{item.content}}</h2>
+                <p>{{item.time | date:"short"}}</p>
+                <button class="button button-assertive button-clear button-small" ng-click="read_item(item)">
+                    <i class="icon ion-android-close"></i>
+                </button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

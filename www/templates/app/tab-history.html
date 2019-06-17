@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshHistory()">
+        </ion-refresher>
+        <div class="row padding" ng-hide="showLoading">
+        <ion-spinner class="sf-loading spinner-positive" icon="ripple"></ion-spinner>
+        </div>
+        <div class="row padding" ng-show="historyBool">
+            <h1 style="color:#bdbdbd;margin:auto;font-size:100pt;"><i class="icon ion-ios-chatboxes-outline"></i></h1>
+        </div>
+        <div class="row padding" ng-show="historyBool">
+            <h4 style="color:#bdbdbd;margin:auto;">
+                Your history is empty. Go to Feed tab and join topics or create a new one.
+            </h4>
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="item in history | orderBy : '-unread'" ng-click="markRead(item)" ui-sref="chat({tuid : item.tid,title : item.title})">
+                <h2>{{item.title}}</h2>
+                <p>~{{item.creator}}</p>
+                <span ng-class="getHistoryBackground(item.unread)" ng-show="{{item.unread!=0}}">{{item.unread}}</span>
+                <ion-option-button class="button button-assertive" ng-click="history.$remove(item)">
+            Remove
+            </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

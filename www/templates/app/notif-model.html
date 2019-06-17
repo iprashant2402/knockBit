@@ -1,0 +1,38 @@
+<ion-modal-view view-title='Notifications'>
+    <ion-header-bar>
+        <h1 class="title">Edit Profile</h1>
+        <button class="button button-positive button-clear icon ion-android-cancel" ng-click="modal.hide()"></button>
+    </ion-header-bar>
+    <ion-content ng-controller="editProfileCtrl">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Full Name</span>
+                <input type="text" ng-model="editName">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Age</span>
+                <input type="number" ng-model="editAge">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Gender
+                </div>
+                <select ng-model="editGender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Education</span>
+                <input type="text" ng-model="editBranch">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Work</span>
+                <input type="text" ng-model="editBatch">
+            </label>
+        </div>
+        <div class="row padding">
+        <button class="button button-block button-calm" ng-click="submitChanges(editName,editAge,editGender,editBatch,editBranch)">Done</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

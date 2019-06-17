@@ -1,0 +1,49 @@
+<ion-view> 
+    <ion-content on-drag-left="onDragLeft()" class="accent-color">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshFeed()">
+        </ion-refresher>
+        <div class="card">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" ng-model="topic_title" class="sf-add-topic" placeholder="What do you want to discuss?"/>
+                </label>
+                <button ng-click="showCreateTopicConfirm(uid,name,email,photo,topic_title)" class="button button-balanced button-small icon ion-paper-airplane button-clear button-stable">
+                </button>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <h4 class="pink lobsterTwo-Bold"><i class="icon ion-arrow-graph-up-right"></i> Trending</h4>
+        </div>
+        <div class="row padding" ng-hide="showTrendLoading">
+        <ion-spinner class="sf-loading" icon="ripple"></ion-spinner>
+        </div>
+        <ion-list>
+            <ion-item class="item item-avatar" ng-repeat="item in trendingTopics | orderBy:'-topic_followers'" ng-click="addTopicHistory(item)" ui-sref="chat({tuid : item.topic_id,title : item.topic_title})">
+                <img ng-src="{{item.ownerPhoto}}"/>
+                <h2><span class="pink">{{item.ownerName}}</span></h2>
+                <p>{{item.createdAt | date}}</p>
+                <span class="sf-med-text item-text-wrap">{{item.topic_title}}</span><br>
+                <p class="subdued">{{item.topic_followers}} Followers</p>
+            </ion-item>
+        </ion-list>
+        <div class="row">
+        <h4 class="pink"><i class="icon ion-egg"></i> Following feed</h4>
+        </div>
+        <div class="row padding" ng-hide="showLoading">
+        <ion-spinner class="sf-loading" icon="ripple"></ion-spinner>
+        </div>
+        <ion-list>
+        <ion-item class="item item-avatar" ng-repeat="item in feedTopics | orderBy:'-createdAt'" ng-click="addTopicHistory(item)" ui-sref="chat({tuid : item.topic_id,title : item.topic_title})">
+            <img ng-src="{{item.ownerPhoto}}"/>
+            <h2><span class="pink">{{item.ownerName}}</span> created the topic</h2>
+            <p>{{item.createdAt | date}}</p>
+            <span class="sf-med-text item-text-wrap">{{item.topic_title}}</span><br>
+            <p class="subdued">{{item.topic_followers}} Followers</p>
+        </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="dark-primary-color">
+        <div class="row divider-color logo-back">
+            <div class="col col-center col-100" align="center">
+                <h1 class="text-primary-color lobsterTwo-Regular">knockBit</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-100" align="center">
+            <h4 class="text-primary-color sans-bold">Login to your account</h4>
+            </div>
+        </div>
+        <div class="row">
+        <ion-spinner class="spinner-royal sf-loading" icon="spiral" ng-show="loginSpinner"></ion-spinner>
+         </div>
+        <form name="loginForm" novalidate ng-submit="login(email,pass)">
+        <div class="row padding">
+            <input type="email" placeholder="Email" class="sf-input" ng-model="email" ng-required="true">
+        </div>
+        <div class="row padding">
+            <input type="password" placeholder="Password" class="sf-input" ng-model="pass" ng-required="true">
+        </div>
+
+        <div class="row">
+            <div class="col col-100" align="center">
+                <button class="button button-block button-balanced" type="submit" ng-disabled="loginForm.$invalid">
+                    Sign In
+                </button>
+            </div>
+        </div>
+
+        </form>
+        <div class="row">
+            <div class="col col-100" align="center">
+                <h4 ng-click="modal.show()"><span class="roboto text-primary-color">Forgot password?</span>
+                <h4><span class="roboto text-primary-color">Don't have an account yet?</span>
+                <a href="#/signup"><span class="roboto text-primary-color">SIGN UP</span></a></h4>
+            </div>
+        </div>
+   </ion-content>
+    <script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Reset Password</h1>
+        <button class='button button-positive button-clear button-icon icon ion-android-close' ng-click="modal.hide()"></button>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list list-inset">
+  <label class="item item-input">
+    <input type="email" placeholder="Registered Email address." ng-model="reset_email">
+  </label>
+</div>
+        <div class="row">
+        <button class="button button-calm button-block" ng-click="reset_pass(reset_email)">Send reset link</button>
+        </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+</ion-view>
